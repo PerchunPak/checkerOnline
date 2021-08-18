@@ -8,6 +8,8 @@ import os
 
 import mcstatus
 
+TOKEN = ''
+
 bot_intents = discord.Intents.default()
 bot_intents.members = True
 
@@ -75,7 +77,7 @@ async def on_ready():
 
 
 try:
-    bot.loop.run_until_complete(bot.start('ODU0NjYzMTMyNTI1MjMyMTI5.YMnNEQ.K6bBH7ibaQj-tgOaOsg7th7UfGA'))
+    bot.loop.run_until_complete(bot.start(TOKEN))
 except KeyboardInterrupt:
     print("\nЗакрытие")
     bot.loop.run_until_complete(bot.change_presence(status=discord.Status.invisible))
